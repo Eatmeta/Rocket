@@ -135,8 +135,8 @@ namespace func_rocket
 		private void DrawGravity(Graphics g)
 		{
 			Action<Vector, Vector> draw = (a,b) => g.DrawLine(Pens.DeepSkyBlue, (int)a.X, (int)a.Y, (int)b.X, (int)b.Y);
-			for (int x = 0; x < spaceSize.Width; x += 50)
-				for (int y = 0; y < spaceSize.Height; y += 50)
+			for (var x = 0; x < spaceSize.Width; x += 50)
+				for (var y = 0; y < spaceSize.Height; y += 50)
 				{
 					var p1 = new Vector(x, y);
 					var v = currentLevel.Gravity(spaceSize, p1);
